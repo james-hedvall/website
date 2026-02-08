@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PCT Thru-Hike 2026</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcfcfc;
+            color: #333;
+            overflow: hidden; /* Prevents double scrollbars */
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* Left side content area - Now Scrollable */
+        .content {
+            flex: 2; 
+            padding: 60px;
+            overflow-y: auto; 
+            scroll-behavior: smooth;
+        }
+
+        /* Right side image area - Stays Pinned */
+        .sidebar-image {
+            flex: 1; 
+            background-image: url('PCT_map.png'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #fcfcfc;
+            border-left: 1px solid #eee;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #2e5a27; 
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: #2e5a27;
+            border-left: 4px solid #2e5a27;
+            padding-left: 15px;
+        }
+
+        p, li {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            max-width: 750px;
+            color: #444;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: #2e5a27;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 40px 0;
+        }
+
+        .cta-button {
+            padding: 12px 24px;
+            background-color: #2e5a27;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            border: 2px solid #2e5a27;
+        }
+
+        .cta-button.outline {
+            background-color: transparent;
+            color: #2e5a27;
+        }
+
+        .cta-button.secondary {
+            background-color: #4a7c44;
+            border-color: #4a7c44;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; overflow-y: auto; }
+            .sidebar-image { height: 50vh; flex: none; }
+            .content { padding: 30px; flex: none; overflow-y: visible; }
+            .button-group { flex-direction: column; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h1>Mexico to Canada</h1>
+            <p><strong>2,650 miles. One summer. One continuous footpath.</strong></p>
+
+            <div class="button-group">
+                <a href="index.html" class="cta-button">Home</a>
+                <a href="#" class="cta-button">Read the Blog</a>
+                <a href="#faq" class="cta-button">FAQ</a>
+                <a href="https://docs.google.com/spreadsheets/d/1u9aguSz0zB5Bm8lVX5GZAlbye-ORpeP-uC80SR3pubA/edit?usp=sharing&rm=minimal" class="cta-button">PCT Gear List</a>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
+
+            <div id="faq">
+                <h3>What is the Pacific Crest Trail?</h3>
+                <p>The PCT is a 2,650-ish mile trail which starts from the US/Mexico border in a small town called Campo, California. The trail meanders through desert before reaching the rocky, mountainous terrain of the Sierra Nevada. The trail then traverses the forested Cascade Mountain range through Northern California, Oregon, and Washington, all the way north to the Canadian border, ending at Manning Park, Canada.</p>
+
+                <h3>And you plan on hiking all 2600 miles?</h3>
+                <p>Yes. I plan on thru-hiking the PCT starting April 2, 2026.</p>
+
+                <h3>What exactly is “a thru hike”?</h3>
+                <p>A thru hike refers to any hiker who is attempting to complete a long trail in its entirety, without taking any prolonged periods of time “off trail” and who completes it with a “continuous footpath” within a season. In essence, start at Point A and hike to Point B without the aid of automobiles to further your advance or avoiding any sections.</p>
+
+                <h3>How long will it take?</h3>
+                <p><strong>The Plan: Win By Attrition</strong></p>
+                <ul>
+                    <li>Average 20 miles per day</li>
+                    <li>Assume a zero day, or rest day, every 7 days</li>
+                    <li>Total days on trail: 135ish</li>
+                    <li>Total zero days: 20ish</li>
+                    <li>Start April 2nd; finish first week of September, 5 months total</li>
+                    <li>Recover at the Fairmont Hotel in Seattle; best morning coffee service ever</li>
+                </ul>
+                <p>I had to apply for a permit in November of 2025, which is far in advance of snowpack levels in the Sierra. Much will be determined by weather conditions. The plan is to start in April when the desert temps of Southern California aren’t in the 100s, and to enter the Sierras approx 45 days later hoping snow pack levels have dropped from their winter heights; ideally you want to finish up in Washington before the snow starts dropping in late September. It’s weird to think, but on your first day on trail you’re just playing a weather window game five months down the road.</p>
+
+                <h3>What about running out of food?</h3>
+                <p>Thru hikers typically resupply their 4-6 days of food they carry in nearby towns. I will do the same.</p>
+
+                <h3>Have you ever thru hiked a trail before?</h3>
+                <p>Nope, first time.</p>
+
+                <h3>What are your odds of making it?</h3>
+                <p>They say 700-1,000 people self-report that they finished the trail, with the total number of permits issued being around 8,000…..so an 8:1 underdog of finishing the entire trail. If anyone reading this is willing to lay me 8:1 book me for $1000; afterall I’m homeless and unemployed.</p>
+
+                <h3>What would make you quit?</h3>
+                <p>Catastrophic injury or death in the family.</p>
+
+                <h3>What gear will you be taking?</h3>
+                <p>I’m not really a gear-head but I do have a list I’ll link here for those that are curious.</p>
+
+                <h3>Why?</h3>
+                <p>Couple reasons. The PCT is a bucket list item for me. I’ve always enjoyed Level II fun over Level I fun; so you’re telling me there’s a chance it’ll be cold, raining, AND I’m sunburnt with a rash I can’t reach? Where do I sign up? I think this is why I’ve loved every single Secondary Marketing job I’ve had in mortgage banking so much. I’m a masochist.</p>
+
+                <p>But the main reason is that I need a reason right now. Life ran right over me the last few years, not ashamed to admit it. Let’s just say what could go wrong, went wrong. Everything culminated with my father dying last year. I’m still wrestling with the implications of not having him in my life.</p>
+            </div>
+        </div>
+
+        <div class="sidebar-image"></div>
+    </div>
+
+</body>
+</html>

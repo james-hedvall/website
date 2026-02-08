@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PCT Thru-Hike 2026</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcfcfc;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* Left side content area */
+        .content {
+            flex: 2; 
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Right side image area */
+        .sidebar-image {
+            flex: 1; 
+            background-image: url('PCT_map.png'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; /* Changed to center for better framing */
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #2e5a27; 
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        /* Button Container */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #2e5a27;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+
+        /* Secondary style for the Google Sheet link */
+        .cta-button.secondary {
+            background-color: #2e5a27;
+            opacity: 0.9;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar-image {
+                height: 40vh;
+                order: -1; 
+            }
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h1>Mexico to Canada</h1>
+            <p>2,650 miles. One summer. Join me as I trek the Pacific Crest Trail, starting from the desert border and heading north to the snowy peaks of Washington.</p>
+            
+            <div class="button-group">
+                <a href="#" class="cta-button">Read the Blog</a>
+                <a href="faq.html" class="cta-button">FAQ</a>
+                <a href="https://docs.google.com/spreadsheets/d/1u9aguSz0zB5Bm8lVX5GZAlbye-ORpeP-uC80SR3pubA/edit?usp=sharing&rm=minimal" target="_blank" class="cta-button">PCT Gear List</a>
+            </div>
+        </div>
+
+        <div class="sidebar-image"></div>
+    </div>
+
+</body>
+</html>
