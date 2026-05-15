@@ -1,1 +1,20 @@
-
+[
+  {
+    "date": "May 15, 2026",
+    "title": "The Mechanics of Interest Rate Trees and MSRs",
+    "excerpt": "A deep dive into why interest rate trees aren't actually for prediction, but for modeling uncertainty. We explore how binomial lattices and backward induction are used to price the negative convexity found in Mortgage Servicing Rights.",
+    "link": "#"
+  },
+  {
+    "date": "April 30, 2026",
+    "title": "Secondary Marketing Strategies in a Volatile Environment",
+    "excerpt": "As market conditions continue to shift, understanding the nuances of pipeline hedging and execution becomes more critical than ever...",
+    "link": "#"
+  },
+  {
+    "date": "April 27, 2026",
+    "title": "The Future of Mortgage Servicing Rights",
+    "excerpt": "Evaluating the long-term value of MSRs requires a deep dive into prepayment speeds and the current interest rate trajectory...",
+    "link": "#"
+  }
+]
