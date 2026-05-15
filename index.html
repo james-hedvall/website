@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Hedvall's Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcfcfc;
+            color: #333;
+        }
+
+        /* Full-width Top Banner */
+        .status-banner {
+            width: 100%;
+            background-color: #415681;
+            color: #ffffff;
+            padding: 15px 0;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 80;
+        }
+
+        /* Container adjusted to take up remaining height */
+        .container {
+            display: flex;
+            height: calc(100vh - 54px); 
+            width: 100%;
+        }
+
+        .content {
+            flex: 2; 
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sidebar-image {
+            flex: 1;
+            background-color: #415681; 
+            background-image: url('PCT_map.png'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-left: 1px solid #eee;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #415681; 
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #415681;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .cta-button.pending {
+            background-color: #999;
+            cursor: not-allowed;
+        }
+
+        .cta-button:hover:not(.pending) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .container { flex-direction: column-reverse; height: auto; }
+            .sidebar-image { height: 30vh; flex: none; }
+            .content { padding: 40px 20px; flex: none; }
+            .button-group { flex-direction: column; width: 100%;}
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="status-banner">
+        James Hedvall's Webpage
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1>James Hedvall's Webpage</h1>
+            <p>I'm currently preparing for my next major project.</p>
+            
+            <div class="button-group">
+                <a href= "#" class="cta-button">Resume</a>
+                <a href="https://docs.google.com/spreadsheets/d/1u9aguSz0zB5Bm8lVX5GZAlbye-ORpeP-uC80SR3pubA/edit?usp=sharing&rm=minimal" target="_blank" class="cta-button">View My Gear List</a>
+                <a href="more_faq.html" class="cta-button">Who Am I?</a>
+                <a href="blog.html" class="cta-button">BLOG</a>
+            </div>
+        </div>
+
+        <div class="sidebar-image"></div>
+    </div>
+
+</body>
+</html>

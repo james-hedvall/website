@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Interview</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcfcfc;
+            color: #333;
+            overflow: hidden; /* Prevents double scrollbars */
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* Left side content area */
+        .content {
+            flex: 2; 
+            padding: 60px;
+            overflow-y: auto; 
+            scroll-behavior: smooth;
+        }
+
+        /* Right side image area */
+        .sidebar-image {
+            flex: 1; 
+            background-image: url('PCT_map.png'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #fcfcfc;
+            border-left: 1px solid #eee;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #415681; 
+        }
+
+        /* Question Style */
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            color: 415;
+            padding-left: 15px;
+            border-left: 4px solid #415681;
+        }
+
+        /* Answer Style aligned with Question Number */
+        .answer {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            max-width: 750px;
+            color: #444;
+            margin: 0;
+            padding-left: 15px; /* Aligns with the text of the H3 */
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 40px 0;
+        }
+
+        .cta-button {
+            padding: 12px 24px;
+            background-color: #415681;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            border: 2px solid #2e5a27;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; overflow-y: auto; }
+            .sidebar-image { height: 50vh; flex: none; }
+            .content { padding: 30px; flex: none; overflow-y: visible; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h1>Personal Interview</h1>
+            <p><strong>I have been told that even after knowing me for awhile, some people still feel as if they don't truly know me.</strong></p>
+            <p><strong>That's probably a fair statement if I'm being honest. So I prompted my favorite AI platform to come up with 300 questions in order to get to know me. These questions were answered about as honestly as I know how, and I hope they shed a little light onto my personality.</strong></p>
+
+            <div class="button-group">
+                <a href="index.html" class="cta-button">Home</a>
+                <a href="#" class="cta-button">Youtube</a>
+                <a href="https://docs.google.com/spreadsheets/d/1u9aguSz0zB5Bm8lVX5GZAlbye-ORpeP-uC80SR3pubA/edit?usp=sharing&rm=minimal" target="_blank" class="cta-button">PCT Gear List</a>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
+
+            <div id="questions">
+                <h3>1. What’s your 'guilty pleasure' TV show?</h3>
+                <p class="answer">A: X-Files, always and forever.</p>
+
+                <h3>2. Are you a morning person or a night owl?</h3>
+                <p class="answer">A: Morning. There's just something about watching earth come alive again.</p>
+
+                <h3>3. What is your go-to karaoke song?</h3>
+                <p class="answer">A: There hasn't been a song created to get me to karaoke.</p>
+
+                <h3>4. What’s the most used emoji on your phone?</h3>
+                <p class="answer">A: Laughing emoji is pretty popular.</p>
+
+                <h3>5. Do you have a 'useless' talent?</h3>
+                <p class="answer">A: Knowing how to hedge against interest rate risk.</p>
+
+                <h3>6. What’s your favorite comfort food?</h3>
+                <p class="answer">A: Cheeseburgers; yes plural.</p>
+
+                <h3>7. If you were a dog, what breed would you be?</h3>
+                <p class="answer">A: I'd like to say Labrador Retriever, but in reality some sort of ugly sheep dog.</p>
+
+                <h3>8. What’s the worst movie you’ve ever seen all the way through?</h3>
+                <p class="answer">A: Interstellar was the worst.</p>
+
+                <h3>9. Are you a 'clean freak' or 'organized chaos' person?</h3>
+                <p class="answer">A: I like to be organized and clean.</p>
+
+                <h3>10. What’s your most controversial food opinion?</h3>
+                <p class="answer">A: Pineapple on pizza; let people live, man.</p>
+
+                <h3>11. What is the best gift you’ve ever received?</h3>
+                <p class="answer">A: My father bought me a .22 when I was 11 years old. He trusted me, that was the gift.</p>
+
+                <h3>12. What’s your favorite board game?</h3>
+                <p class="answer">A: I want to say chess, but I suck at chess.</p>
+
+                <h3>13. If you had a warning label, what would it say?</h3>
+                <p class="answer">A: I know what you're thinking.</p>
+
+                <h3>14. What’s the most 'touristy' thing you’ve ever done?</h3>
+                <p class="answer">A: Ate clam chowder out of a Boudin bread bowl at Pier 39 in San Francisco.</p>
+
+                <h3>15. What is your favorite holiday?</h3>
+                <p class="answer">A: 4th of July, and it's not even close.</p>
+
+                <h3>16. Coffee, tea, or something else?</h3>
+                <p class="answer">A: Coffee with a splash of half and half.</p>
+
+                <h3>17. What’s the last thing you Googled?</h3>
+                <p class="answer">A: What are the best cheeseburgers in each state?</p>
+
+                <h3>18. What’s your favorite scent?</h3>
+                <p class="answer">A: Vanilla.</p>
+
+                <h3>19. Do you believe in ghosts?</h3>
+                <p class="answer">A: Trending towards yes.</p>
+
+                <h3>20. What’s the best concert you’ve ever attended?</h3>
+                <p class="answer">A: I've never attended a concert.</p>
+
+                <h3>21. What’s your 'Roman Empire' (something you think about daily)?</h3>
+                <p class="answer">A: My personal failures are high on that list.</p>
+
+                <h3>22. If you won $1,000 today, how would you spend it?</h3>
+                <p class="answer">A: I'd buy a new backpacking tent.</p>
+
+                <h3>23. What’s your favorite way to spend a rainy day?</h3>
+                <p class="answer">A: Watching the rain with a cup of coffee.</p>
+
+                <h3>24. Are you a re-watcher or always looking for something new?</h3>
+                <p class="answer">A: New.</p>
+
+                <h3>25. Fly or drive?</h3>
+                <p class="answer">A: There's nothing like a good road trip.</p>
+
+                <h3>26. What’s your dream travel destination?</h3>
+                <p class="answer">A: Machu Picchu in Peru or Perth, Australia.</p>
+
+                <h3>27. Do you prefer big parties or small gatherings?</h3>
+                <p class="answer">A: Small gatherings....but to be fair neither are appealing.</p>
+
+                <h3>28. What’s the best piece of advice you’ve ever received?</h3>
+                <p class="answer">A: Never tell people your goals.</p>
+
+                <h3>29. Are you a 'pack light' or 'bring everything' traveler?</h3>
+                <p class="answer">A: Light and nimble, like a cat, is the way to go.</p>
+
+                <h3>30. What is your favorite book of all time?</h3>
+                <p class="answer">A: Master and Commander; the entire series is great though.</p>
+
+                <h3>31. Do you prefer the beach or the mountains?</h3>
+                <p class="answer">A: LOLOLOL this question is an entire chapter in my manifesto.</p>
+
+                <h3>32. What’s your favorite way to exercise?</h3>
+                <p class="answer">A: Early and alone.</p>
+
+                <h3>33. How do you handle a bad day?</h3>
+                <p class="answer">A: Not well, I have a tendency to ruminate over things.</p>
+
+                <h3>34. What’s the first thing you do when you get home from work?</h3>
+                <p class="answer">A: Change and then have a snack.</p>
+
+                <h3>35. Are you a 'save for a rainy day' or 'spend it while you have it' person?</h3>
+                <p class="answer">A: Save.....but sometimes is it worth saving a hundred bucks?</p>
+
+                <h3>36. What’s your favorite childhood memory?</h3>
+                <p class="answer">A: Deer hunting with my Dad. Miss ya pops.</p>
+
+                <h3>37. If you could live in any era, which would you choose?</h3>
+                <p class="answer">A: Before, during and after WWII....that generation wasn't guaranteed anything and they rolled with the punches.</p>
+
+                <h3>38. What’s your favorite city in the world?</h3>
+                <p class="answer">A: San Francisco, and it's not even close.</p>
+
+                <h3>39. Do you prefer podcasts or music?</h3>
+                <p class="answer">A: Podcast; however, silence is an underrated noise in our society.</p>
+
+                <h3>40. What is your dream job (ignoring money)?</h3>
+                <p class="answer">A: I can't have a boss anymore in this life, I just can't, so doing whatever I guess.</p>
+
+                <h3>41. What’s your favorite type of cuisine?</h3>
+                <p class="answer">A: French.</p>
+
+                <h3>42. How many unread emails are in your inbox right now?</h3>
+                <p class="answer">A: I just looked: 317.....who emails when it's important?</p>
+
+                <h3>43. What’s the most adventurous thing you’ve ever done?</h3>
+                <p class="answer">A: Moved cross country for the summer to be a bouncer at a club in Ocean City, Maryland.</p>
+
+                <h3>44. Do you prefer physical books or Kindles?</h3>
+                <p class="answer">A: Physical.</p>
+
+                <h3>45. What is your 'love language'?</h3>
+                <p class="answer">A: Appreciation.</p>
+
+                <h3>46. What’s your favorite time of year?</h3>
+                <p class="answer">A: Anytime but winter. Winter is death. Winter is about surviving not thriving.</p>
+
+                <h3>47. If you could move to any country tomorrow, where would it be?</h3>
+                <p class="answer">A: I've never been outside the US and I have no desire to live in other countries. Sorry. USA all the way.</p>
+
+                <h3>48. What’s the best meal you’ve ever cooked?</h3>
+                <p class="answer">A: It's either my Coq au Vin, or a bolognese sauce that takes awhile to make.</p>
+
+                <h3>49. Do you have any tattoos or piercings?</h3>
+                <p class="answer">A: Yes I do.</p>
+
+                <h3>50. What’s your favorite way to volunteer or give back?</h3>
+                <p class="answer">A: I try hard to make myself available professionally to help those around me succeed in their professional life.</p>
+
+                <h3>51. What is your biggest pet peeves?</h3>
+                <p class="answer">A: Hot sandwiches, people hiking while playing music, and fake friends.</p>
+
+                <h3>52. What are you most proud of in your life so far?</h3>
+                <p class="answer">A: Being resilient.</p>
+
+                <h3>53. What is a 'dealbreaker' for you in a friendship?</h3>
+                <p class="answer">A: Not being loyal and talking out-of-turn; assume everything is off the record.</p>
+
+                <h3>54. Are you more like your mother or your father?</h3>
+                <p class="answer">A: As much as I hate to admit it, my mother.</p>
+
+                <h3>55. What’s a skill you’ve always wanted to learn?</h3>
+                <p class="answer">A: How to ice skate.</p>
+
+                <h3>56. How do you define 'success'?</h3>
+                <p class="answer">A: Being self-sufficient.</p>
+
+                <h3>57. What’s the most spontaneous thing you’ve ever done?</h3>
+                <p class="answer">A: Couldn't tell ya, I'm not very spontaneous.</p>
+
+                <h3>58. Do you consider yourself an introvert, extrovert, or ambivert?</h3>
+                <p class="answer">A: Introvert.</p>
+
+                <h3>59. What’s a habit you’re trying to break?</h3>
+                <p class="answer">A: Drinking. Not that it's a problem is just annoying at this point.</p>
+
+                <h3>60. What’s a habit you’re proud of?</h3>
+                <p class="answer">A: Getting up early.</p>
+
+                <h3>61. What is your biggest fear?</h3>
+                <p class="answer">A: Failure.</p>
+
+                <h3>62. How do you react to criticism?</h3>
+                <p class="answer">A: Normally I don't mind, there are only two people who could criticise me and it would effect me.</p>
+
+                <h3>63. Are you a 'glass half full' or 'half empty' person?</h3>
+                <p class="answer">A: Half full for sure.</p>
+
+                <h3>64. What’s the most important lesson you learned in the last year?</h3>
+                <p class="answer">A: You have one, maybe two true friends in this life, everyone else is just passing through and doesn't really care about you.</p>
+
+                <h3>65. What’s something that always makes you laugh?</h3>
+                <p class="answer">A: People who say they've ended friendships over a difference of political views. Really? How weak minded are they?</p>
+
+                <h3>66. How do you want to be remembered?</h3>
+                <p class="answer">A: As someone who tried to love, and tried to be loved.</p>
+
+                <h3>67. What’s your favorite thing about yourself?</h3>
+                <p class="answer">A: I would literally take a bullet for my friends....oh and I have no social media presence. Social media will ultimateley bring down humanity.</p>
+
+                <h3>68. If you could change one thing about your personality, what would it be?</h3>
+                <p class="answer">A: I need to relinquish grudges.....but not today.</p>
+
+                <h3>69. What’s the hardest thing you’ve ever had to do?</h3>
+                <p class="answer">A: Watch my father die.</p>
+
+                <h3>70. What does 'home' mean to you?</h3>
+                <p class="answer">A: Anyplace where you can be yourself.</p>
+
+                <h3>71. Are you better at talking or listening?</h3>
+                <p class="answer">A: The latter.</p>
+
+                <h3>72. What is the most courageous thing you’ve ever done?</h3>
+                <p class="answer">A: Saved someone from drowning in the ocean.</p>
+
+                <h3>73. What makes you feel the most confident?</h3>
+                <p class="answer">A: Knowing that in a group of people, I'll be the last to quit.</p>
+
+                <h3>74. How do you handle stress?</h3>
+                <p class="answer">A: Suck it up, buttercup.</p>
+
+                <h3>75. What’s a mystery you’d love to know the answer to?</h3>
+                <p class="answer">A: Does 'string theory' have any merit?</p>
+
+                <h3>76. What was your very first job?</h3>
+                <p class="answer">A: Picking up the flag sticks at a golf course at the end of the day.</p>
+
+                <h3>77. What’s the best career advice you’ve ever gotten?</h3>
+                <p class="answer">A: 'The job isn't about doing the job, it's about bringing people together to accomplish more than you can alone.'</p>
+
+                <h3>78. Do you work to live, or live to work?</h3>
+                <p class="answer">A: Live to work.</p>
+
+                <h3>79. What’s your favorite 'side project' right now?</h3>
+                <p class="answer">A: Pacific Crest Trail.</p>
+
+                <h3>80. If you could start a business tomorrow, what would it be?</h3>
+                <p class="answer">A: Something finance related; REIT perhaps.</p>
+
+                <h3>81. What’s the most stressful part of your job?</h3>
+                <p class="answer">A: Failing, or making mistakes, leads to financial losses which can be catostrophic to the organization. Secondary/Capital Markets is often the most overlooked, but important, department at a mortgage bank, and it's not even close. It's mission crticial that we are correct 100% of the time with respect to risk management.</p>
+
+                <h3>82. What’s the most rewarding part of your job?</h3>
+                <p class="answer">A: When risk is an after-thought.</p>
+
+                <h3>83. Are you a 'checklist' person or a 'wing it' person?</h3>
+                <p class="answer">A: Checklist, for sure.</p>
+
+                <h3>84. What’s a hobby you dropped that you wish you’d kept?</h3>
+                <p class="answer">A: Surf fishing.</p>
+
+                <h3>85. If you could be a world-class expert in one thing, what would it be?</h3>
+                <p class="answer">A: Particle Physics.</p>
+
+                <h3>86. How do you stay motivated?</h3>
+                <p class="answer">A: Knowing that nobody really cares, and you need to work harder. I struggle with this currently.</p>
+
+                <h3>87. What’s your favorite way to spend a Saturday morning?</h3>
+                <p class="answer">A: Taking a hike.</p>
+
+                <h3>88. Do you prefer working in a team or alone?</h3>
+                <p class="answer">A: Team. This whole post-plandemic of working at home, insulating yourself from the world is strange to me.</p>
+
+                <h3>89. What’s the most interesting thing you’ve learned recently?</h3>
+                <p class="answer">A: You never lose in roulette if you bet on black.</p>
+
+                <h3>90. If you didn’t have to sleep, what would you do with the extra time?</h3>
+                <p class="answer">A: I would learn a language: Mandarin and French</p>
+
+                <h3>91. What’s your favorite app on your phone?</h3>
+                <p class="answer">A: Weather.</p>
+
+                <h3>92. Do you have a 'bucket list'? What’s at the top?</h3>
+                <p class="answer">A: There is only one item on that list: to thru hike the PCT. Someday.</p>
+
+                <h3>93. What’s your favorite way to decompress?</h3>
+                <p class="answer">A: Working out.</p>
+
+                <h3>94. If you could have any celebrity as a mentor, who would it be?</h3>
+                <p class="answer">A: Jim Shockey.</p>
+
+                <h3>95. What’s the best 'life hack' you know?</h3>
+                <p class="answer">A: Never drink. Ever.</p>
+
+                <h3>96. How do you feel about public speaking?</h3>
+                <p class="answer">A: Depends on what the subject is.</p>
+
+                <h3>97. What’s your favorite type of art?</h3>
+                <p class="answer">A: I appreciate all art, even more so as I age.</p>
+
+                <h3>98. Do you prefer movies at home or in the theater?</h3>
+                <p class="answer">A: Home.</p>
+
+                <h3>99. What’s a piece of technology you couldn’t live without?</h3>
+                <p class="answer">A: A knife; to Homo Sapiens this was the peak invention by the way.</p>
+
+                <h3>100. What is your favorite museum you’ve ever visited?</h3>
+                <p class="answer">A: American Museum of Natural History in NYC; don't miss 'Lucy'.</p>
+
+                <h3>101. If you could have dinner with any three people, dead or alive, who would they be?</h3>
+                <p class="answer">A: Jesus, Bill Clinton, and my best friend.</p>
+
+                <h3>102. If you could time travel, would you go to the past or the future?</h3>
+                <p class="answer">A: The past. I'd like to witness prehistorical man.</p>
+
+                <h3>103. What is the meaning of a 'good life' to you?</h3>
+                <p class="answer">A: Productive, to have loved, to have been loved, and ultimately missed by those that knew you.</p>
+
+                <h3>104. If you could know the date of your death, would you want to?</h3>
+                <p class="answer">A: Nope.</p>
+
+                <h3>105. What do you think happens after we die?</h3>
+                <p class="answer">A: I think energy doesn't disappear, but merely transfers....whatever that means.</p>
+
+                <h3>106. If you could swap lives with someone for a day, who would it be?</h3>
+                <p class="answer">A: People that actually do real work and further humananity; Terence Tao, comes to mind.</p>
+
+                <h3>107. What is one thing you would change about the world?</h3>
+                <p class="answer">A: The divisive nature of organized religeon.</p>
+
+                <h3>108. Do you believe in soulmates?</h3>
+                <p class="answer">A: Yes I do.</p>
+
+                <h3>109. What is your most controversial non-food opinion?</h3>
+                <p class="answer">A: That we live in a hologram. And we never went to the moon. Discuss.</p>
+
+                <h3>110. If you could stop aging at any age, which would it be?</h3>
+                <p class="answer">A: 27</p>
+
+                <h3>111. What is the most important quality in a partner?</h3>
+                <p class="answer">A: Loyalty.</p>
+
+                <h3>112. If you were a superhero, what would your power be?</h3>
+                <p class="answer">A: The ability to speak to animals.</p>
+
+                <h3>113. Would you rather be famous or wealthy?</h3>
+                <p class="answer">A: Neither will bring you true happiness but w/o money what's the point, right?</p>
+
+                <h3>114. If you could see 10 years into your own future, would you?</h3>
+                <p class="answer">A: Dear Lord, my worst nightmare LOL</p>
+
+                <h3>115. What is the most beautiful thing you’ve ever seen?</h3>
+                <p class="answer">A: There are four things; one is a person, and three are of nature.</p>
+
+                <h3>116. Do you believe everything happens for a reason?</h3>
+                <p class="answer">A: I believe everything is predetermined in life.</p>
+
+                <h3>117. What is your greatest regret?</h3>
+                <p class="answer">A: LOLOLOL how much time you got?</p>
+
+                <h3>118. If you had to leave your house in a fire, what three things would you grab?</h3>
+                <p class="answer">A: My wallet, my pistol and the left over bbq chicken I made (I make great chicken).</p>
+
+                <h3>119. What is the most important 'truth' you’ve discovered?</h3>
+                <p class="answer">A: You'll only have a few people who actually care about you in life.</p>
+
+                <h3>120. If you were the last person on Earth, what would you do?</h3>
+                <p class="answer">A: Walk the Earth.</p>
+
+                <h3>121. What does 'freedom' mean to you?</h3>
+                <p class="answer">A: Freedom is more than action, it also means 'free thought' like the Forefathers laid out.</p>
+
+                <h3>122. Do you think humans are inherently good or bad?</h3>
+                <p class="answer">A: Humans have, and will always be competing for finite resources...so I guess my reply is how do you define 'bad'?</p>
+
+                <h3>123. If you could ask a crystal ball one thing about your life, what would it be?</h3>
+                <p class="answer">A: Will I ever find it again?</p>
+
+                <h3>124. What’s the most significant 'turning point' in your life?</h3>
+                <p class="answer">A: I was 12 yrs old or so when I realized my parents didn't have a clue.</p>
+
+                <h3>125. What is your definition of 'love'?</h3>
+                <p class="answer">A: Remembering what toppings I like on my cheeseburgers.</p>
+
+                <h3>126. Cats or dogs?</h3>
+                <p class="answer">A: Dogs, and it's not even close.</p>
+
+                <h3>127. Sweet or savory?</h3>
+                <p class="answer">A: Savory.</p>
+
+                <h3>128. Call or text?</h3>
+                <p class="answer">A: Texting is such a cheap way of communicating, especially if you care about the other person.</p>
+
+                <h3>129. Instagram or TikTok?</h3>
+                <p class="answer">A: LOLOL NEITHER....</p>
+
+                <h3>130. Early bird or night owl?</h3>
+                <p class="answer">A: I get up everyday around 4:30am so you decide.</p>
+
+                <h3>131. IOS or Android?</h3>
+                <p class="answer">A: Still deciding.</p>
+
+                <h3>132. Winter or summer?</h3>
+                <p class="answer">A: Summer; winter is death, summer is life.</p>
+
+                <h3>133. Fiction or non-fiction?</h3>
+                <p class="answer">A: Non-fiction.</p>
+
+                <h3>134. Comedy or horror?</h3>
+                <p class="answer">A: Comedy....life is scary enough.</p>
+
+                <h3>135. City or country?</h3>
+                <p class="answer">A: City-ish, as much as I hate to admit it.</p>
+
+                <h3>136. Sneakers or dress shoes?</h3>
+                <p class="answer">A: Dress shoes.</p>
+
+                <h3>137. Dine in or take out?</h3>
+                <p class="answer">A: Dine in. Enjoy the experience.</p>
+
+                <h3>138. Physical map or GPS?</h3>
+                <p class="answer">A: GPS; however, knowing how to use a compass and topo puts you in the 1% club.</p>
+
+                <h3>139. Netflix or YouTube?</h3>
+                <p class="answer">A: YouTube.</p>
+
+                <h3>140. Modern or vintage?</h3>
+                <p class="answer">A: Cars and watches, vintage; everything else modern.</p>
+
+                <h3>141. Hot coffee or iced coffee?</h3>
+                <p class="answer">A: Ooohhh both have their places but I'll say hot coffee.</p>
+
+                <h3>142. Concert or sporting event?</h3>
+                <p class="answer">A: Post 9/11 I wouldn't travel to either. The world is nuts.</p>
+
+                <h3>143. Zoo or aquarium?</h3>
+                <p class="answer">A: Aquarium; sea is life.</p>
+
+                <h3>144. Plane or train?</h3>
+                <p class="answer">A: LOL train.</p>
+
+                <h3>145. Truth or dare?</h3>
+                <p class="answer">A: Dare.</p>
+
+                <h3>146. Pancakes or waffles?</h3>
+                <p class="answer">A: Neither; French toast.</p>
+
+                <h3>147. Puzzles or video games?</h3>
+                <p class="answer">A: Puzzle. Adults playing video games always makes me laugh.</p>
+
+                <h3>148. Introvert or extrovert?</h3>
+                <p class="answer">A: You'll find that out at the next cocktail party we attend together.</p>
+
+                <h3>149. Ocean or lake?</h3>
+                <p class="answer">A: Ocean; even asking the question is ridiculous</p>
+
+                <h3>150. Silver or gold?</h3>
+                <p class="answer">A: Gold.....I think. Depends.</p>
+
+                <h3>151. What was your favorite cartoon growing up?</h3>
+                <p class="answer">A: Wile E. Coyote.</p>
+
+                <h3>152. Did you have an imaginary friend?</h3>
+                <p class="answer">A: If I did he was completely imaginary even to me.</p>
+
+                <h3>153. What was your favorite subject in school?</h3>
+                <p class="answer">A: Math.</p>
+
+                <h3>154. What’s the first movie you remember seeing in theaters?</h3>
+                <p class="answer">A: Jaws.</p>
+
+                <h3>155. Who was your first celebrity crush?</h3>
+                <p class="answer">A: Cindy Crawford.</p>
+
+                <h3>156. Were you a 'rebellious' teen or a 'good kid'?</h3>
+                <p class="answer">A: Good.</p>
+
+                <h3>157. What was your favorite toy as a child?</h3>
+                <p class="answer">A: Nerf football.</p>
+
+                <h3>158. Did you play any sports growing up?</h3>
+                <p class="answer">A: Baseball, football, Basketball...the usual.</p>
+
+                <h3>159. What did you want to be when you grew up?</h3>
+                <p class="answer">A: I wanted to be a banker...when it was a respected occupation.</p>
+
+                <h3>160. What was your favorite family tradition?</h3>
+                <p class="answer">A: Going up to the lake when I was a kid.</p>
+
+                <h3>161. Did you have a nickname as a kid?</h3>
+                <p class="answer">A: I'm a GenXer and back then everyone just called everyone else by their last name, so maybe.</p>
+
+                <h3>162. What’s the best birthday party you ever had?</h3>
+                <p class="answer">A: I never had a birthday party. Honestly.</p>
+
+                <h3>163. What was your least favorite chore?</h3>
+                <p class="answer">A: I never minded chores.</p>
+
+                <h3>164. Did you grow up with pets?</h3>
+                <p class="answer">A: Yes; Pax, Boots, Tanner, I miss them all.</p>
+
+                <h3>165. What was your favorite book as a child?</h3>
+                <p class="answer">A: I can't remember.</p>
+
+                <h3>166. Who was your favorite teacher and why?</h3>
+                <p class="answer">A: I had an English teacher in college who would say 'Good writing, is re-writing.'</p>
+
+                <h3>167. What’s a song that reminds you of high school?</h3>
+                <p class="answer">A: No song reminds me of high school.</p>
+
+                <h3>168. Did you ever go to summer camp?</h3>
+                <p class="answer">A: No.</p>
+
+                <h3>169. What was your first car?</h3>
+                <p class="answer">A: 1987 Ford Taurus.</p>
+
+                <h3>170. What’s the biggest trouble you ever got into?</h3>
+                <p class="answer">A: Shooting out the lights of the local Elks Lodge with a BB gun.</p>
+
+                <h3>171. Did you have a favorite hiding spot?</h3>
+                <p class="answer">A: Around the corner at a Catholic convent.</p>
+
+                <h3>172. What was the best 'school lunch' day?</h3>
+                <p class="answer">A: We never had lunch at our schools.</p>
+
+                <h3>173. What’s something from your childhood you wish was still popular?</h3>
+                <p class="answer">A: Capri Suns.</p>
+
+                <h3>174. Were you close with your siblings?</h3>
+                <p class="answer">A: No.</p>
+
+                <h3>175. What’s the most 'embarrassing' thing your parents did?</h3>
+                <p class="answer">A: They got married.</p>
+
+                <h3>176. How do you feel about social media?</h3>
+                <p class="answer">A: It's simply the worst thing man has created next to nuclear weapons; civilization will not survive social media.</p>
+
+                <h3>177. Is it better to be respected or liked?</h3>
+                <p class="answer">A: I could care less about either.</p>
+
+                <h3>178. What is the most important virtue?</h3>
+                <p class="answer">A: Keeping your word.</p>
+
+                <h3>179. Do you believe in second chances?</h3>
+                <p class="answer">A: Yes.</p>
+
+                <h3>180. How do you define 'loyalty'?</h3>
+                <p class="answer">A: I do the exact opposite that almost everyone in my life has shown me.</p>
+
+                <h3>181. What’s your opinion on 'white lies'?</h3>
+                <p class="answer">A: No, no, you should tell someone when the dress makes them look fat.</p>
+
+                <h3>182. Is it more important to be kind or to be right?</h3>
+                <p class="answer">A: Be kind; too many people use the excuse of 'being right' to justify being an asshole.</p>
+
+                <h3>183. Do you think people can truly change?</h3>
+                <p class="answer">A: At a given point, everyone can change.</p>
+
+                <h3>184. What is the biggest problem facing the world today?</h3>
+                <p class="answer">A: War has gone mainstream.</p>
+
+                <h3>185. What’s your 'philosophy' on money?</h3>
+                <p class="answer">A: It's a giant PIA so treat it as such.</p>
+
+                <h3>186. How much do you value privacy?</h3>
+                <p class="answer">A: LOL you don't know me very well then LOL</p>
+
+                <h3>187. What does 'spirituality' mean to you?</h3>
+                <p class="answer">A: Catholic church.</p>
+
+                <h3>188. Do you think AI is a good or bad thing for humanity?</h3>
+                <p class="answer">A: Man, like almost everything, will misuse it.</p>
+
+                <h3>189. What is the role of art in society?</h3>
+                <p class="answer">A: Art is super important to any society, it defines a culture to some degree.</p>
+
+                <h3>190. What is your 'political' dealbreaker?</h3>
+                <p class="answer">A: The stifling of free speech, and 'cancel culture'.</p>
+
+                <h3>191. Do you believe in luck or hard work?</h3>
+                <p class="answer">A: Hard work trumps getting lucky....unless you're gambling.</p>
+
+                <h3>192. How do you handle a difference of opinion?</h3>
+                <p class="answer">A: I LOVE people who have a different opinion than I do....convince me I'm wrong and I'll change.</p>
+
+                <h3>193. What’s the most important thing to teach the next generation?</h3>
+                <p class="answer">A: That past generations actually shed blood for the liberties we possess.</p>
+
+                <h3>194. Do you believe in 'fate'?</h3>
+                <p class="answer">A: Meh.</p>
+
+                <h3>195. What makes a person 'good'?</h3>
+                <p class="answer">A: Returning their shopping cart to the stall.</p>
+
+                <h3>196. Is peace or passion more important in a relationship?</h3>
+                <p class="answer">A: Peace; some use the word 'passion' to describe dysfunctional relationships.</p>
+
+                <h3>197. How do you define 'success' for yourself?</h3>
+                <p class="answer">A: Being happy.</p>
+
+                <h3>198. What is the most selfless thing you’ve ever done?</h3>
+                <p class="answer">A: I once let a guy merge into my lane during rush hour even though he didn't use a blinker.</p>
+
+                <h3>199. What’s your opinion on 'cancel culture'?</h3>
+                <p class="answer">A: It's insidious.</p>
+
+                <h3>200. If you could make one law, what would it be?</h3>
+                <p class="answer">A: Abolish the Federal Reserve.</p>
+
+                <h3>201. What is your favorite word?</h3>
+                <p class="answer">A: Tertiary....so seldom used.</p>
+
+                <h3>202. If you were a kitchen appliance, what would you be?</h3>
+                <p class="answer">A: A Bass-O-Matic.</p>
+
+                <h3>203. What’s your 'zombie apocalypse' plan?</h3>
+                <p class="answer">A: A truck, a shotgun and a cooler full of beer, 'cause why not.</p>
+
+                <h3>204. What is the funniest joke you know by heart?</h3>
+                <p class="answer">A: I only remember the punchline: 'I said 10cc's not Tennessee'</p>
+
+                <h3>205. If you could talk to one animal species, which would it be?</h3>
+                <p class="answer">A: I mean c'mon, dogs.</p>
+
+                <h3>206. What’s the most 'useless' thing you’ve ever bought?</h3>
+                <p class="answer">A: My college degree.</p>
+
+                <h3>207. Do you believe in aliens?</h3>
+                <p class="answer">A: Yes.</p>
+
+                <h3>208. What’s your favorite 'bad' movie?</h3>
+                <p class="answer">A: Wild Hogs....or Fools Gold.</p>
+
+                <h3>209. If you were a professional wrestler, what would your name be?</h3>
+                <p class="answer">A: Random Factoids.</p>
+
+                <h3>210. What’s the most 'out of character' thing you’ve ever done?</h3>
+                <p class="answer">A: Picked up and moved for work.</p>
+
+                <h3>211. What is the weirdest thing you’ve ever eaten?</h3>
+                <p class="answer">A: A chicken egg....I mean c'mon think about it.</p>
+
+                <h3>212. What’s the longest you’ve gone without sleep?</h3>
+                <p class="answer">A: Two days.</p>
+
+                <h3>213. If you could be any fictional character, who would it be?</h3>
+                <p class="answer">A: Mulder from the X-Files.</p>
+
+                <h3>214. What’s the best 'prank' you’ve ever pulled?</h3>
+                <p class="answer">A: I've never pulled a prank on anyone, but I have ideas.</p>
+
+                <h3>215. What’s the most 'unpopular opinion' you hold?</h3>
+                <p class="answer">A: Life is a hologram.</p>
+
+                <h3>216. If you could rename yourself, what name would you pick?</h3>
+                <p class="answer">A: These questions are lame-o.</p>
+
+                <h3>217. What’s your favorite 'conspiracy theory'?</h3>
+                <p class="answer">A: We never landed on the moon.</p>
+
+                <h3>218. Do you have any 'irrational' fears?</h3>
+                <p class="answer">A: Not really.</p>
+
+                <h3>219. What’s the most 'starstruck' you’ve ever been?</h3>
+                <p class="answer">A: I was once in a service elevator with Sean Connery, holding a piece of sheetrock, that was pretty cool.</p>
+
+                <h3>220. If you had a permanent theme song when you enter a room, what would it be?</h3>
+                <p class="answer">A: Billy Joel's 'My Life'</p>
+
+                <h3>221. What is your favorite Wikipedia rabbit hole?</h3>
+                <p class="answer">A: String theory.</p>
+
+                <h3>222. What’s the most 'adult' thing you’ve done recently?</h3>
+                <p class="answer">A: HA! My entire life has been adulting.</p>
+
+                <h3>223. If you could be a contestant on any game show, which one?</h3>
+                <p class="answer">A: Hunger Games.</p>
+
+                <h3>224. What’s your favorite 'dad joke'?</h3>
+                <p class="answer">A: My doctor told me I was going deaf. And that news was hard to hear.</p>
+
+                <h3>225. What would you do if you were invisible for a day?</h3>
+                <p class="answer">A: Renew my driver's license without standing in line.</p>
+
+                <h3>226. What are you looking forward to this week?</h3>
+                <p class="answer">A: My daily workouts.</p>
+
+                <h3>227. What is one thing you’re grateful for today?</h3>
+                <p class="answer">A: My daily workouts.</p>
+
+                <h3>228. What’s the best compliment you’ve ever received?</h3>
+                <p class="answer">A: Someone once complimented me on my suit, said I looked 'dapper' I always remember that one.</p>
+
+                <h3>229. Do you like to travel?</h3>
+                <p class="answer">A: I like road trips at this point in my life.</p>
+
+                <h3>230. What’s your go-to sandwich?</h3>
+                <p class="answer">A: I gotta say, a ham and swiss is right at the top of the list.</p>
+
+                <h3>231. Who is the most influential person in your life?</h3>
+                <p class="answer">A: Nobody is currently influential in my life. Allowing others that power is unproductive.</p>
+
+                <h3>232. What’s the last thing that made you cry?</h3>
+                <p class="answer">A: My father dying.</p>
+
+                <h3>233. What’s your favorite way to make someone else’s day?</h3>
+                <p class="answer">A: Be genuine, and compliment them on something.</p>
+
+                <h3>234. If you could send a message to the entire world, what would it be?</h3>
+                <p class="answer">A: 'Put down the phone, pick up a physical map, and for the love of everything holy, stop putting raisins in potato salad.'</p>
+
+                <h3>235. What’s your favorite memory of a loved one?</h3>
+                <p class="answer">A: Watching my dad successfully fix something around the house using absolutely the wrong tool for the job.</p>
+
+                <h3>236. What is the most 'peaceful' place you’ve ever been?</h3>
+                <p class="answer">A: Mile 1,200 of a long trail where the only 'Sales' person trying to go over my head is a gray squirrel.</p>
+
+                <h3>237. What makes you feel the most alive?</h3>
+                <p class="answer">A: That moment around 4:35 AM when the coffee kicks in and I realize I’ve got a head start on the world.</p>
+
+                <h3>238. If you could have one wish granted, what would it be?</h3>
+                <p class="answer">A: That my knees would magically have the cartilage of a 28-year-old while I keep the wisdom of a 50-something.</p>
+
+                <h3>239. What is your favorite quote?</h3>
+                <p class="answer">A: 'You can be a lion, or you can be a gazelle...but one way or another when the sun comes up you better get your ass moving'</p>
+
+                <h3>240. What is a question you wish people asked you more often?</h3>
+                <p class="answer">A: How are you doing?</p>
+
+                <h3>241. What’s the most important thing you want to do before you die?</h3>
+                <p class="answer">A: I would like to thru hike all three long trails in the United States.</p>
+
+                <h3>242. What is the most 'magical' moment you’ve experienced?</h3>
+                <p class="answer">A: The first time I saw the stars from a high-altitude campsite with no light pollution.</p>
+
+                <h3>243. How do you want to be remembered?</h3>
+                <p class="answer">A: As someone who tried.</p>
+
+                <h3>244. What’s your 'simple pleasure'?</h3>
+                <p class="answer">A: Pulling a perfectly 'slipped' rose cutting out of the dirt and seeing that first tiny root.</p>
+
+                <h3>245. What is the best part of your day?</h3>
+                <p class="answer">A: Watching the sun come up.</p>
+
+                <h3>246. What’s something you’re proud of that no one knows?</h3>
+                <p class="answer">A: I can hand-code a website in HTML/CSS that looks better than those automated builders.</p>
+
+                <h3>247. What is your 'happy place'?</h3>
+                <p class="answer">A: Surf fishing or on a long hike.</p>
+
+                <h3>248. If you could give your younger self one piece of advice, what would it be?</h3>
+                <p class="answer">A: 'Buy more Bitcoin, take more hikes, and stop worrying about what the people at the cool table think.'</p>
+
+                <h3>249. What are you most excited about for the future?</h3>
+                <p class="answer">A: April 2027. Boots on the trail, pack on the back, and 2,650 miles of 'leave me alone' time.</p>
+
+                <h3>250. What is the best thing about being you?</h3>
+                <p class="answer">A: I’m the only person I know who can appreciate a fine French Coq au Vin and a Safeway deli salad with equal sincerity.</p>
+
+                <h3>251. What is a piece of personal information that's interesting about you?</h3>
+                <p class="answer">A: A piece of my personal information is on every iPhone ever made.</p>
+
+                <h3>252. What is your go-to sandwich?</h3>
+                <p class="answer">A: A good ham and swiss on a dutch crunch is up there; mayo, mustard, shredded lettuce, onion, tomatoe and pickles.</p>
+
+                <h3>253. What is your favorite "Non-Big" city?</h3>
+                <p class="answer">A: Halfmoon Bay, Ca.</p>
+
+                <h3>254. What is the best $20 you’ve spent recently?</h3>
+                <p class="answer">A: Sardines, pickled red onions with hot sauce on crustini.</p>
+
+                <h3>255. Are you a "peel the orange" or "slice the orange" person?</h3>
+                <p class="answer">A: Peel.</p>
+
+                <h3>256. What is your favorite type of tree?</h3>
+                <p class="answer">A: Japanese maple.</p>
+
+                <h3>257. If you had to be a character in a sitcom, which one would it be?</h3>
+                <p class="answer">A: Chandler on Friends. I mean, he was a normal idiot ya'know.</p>
+
+                <h3>258. What’s the best "pantry staple" hack you know?</h3>
+                <p class="answer">A: Oh it's easily Spaghetti Aglio e Olio....as much as I love French cuisine, Italians have simple down to a science.</p>
+
+                <h3>259. Do you prefer your popcorn salty, sweet, or buttery?</h3>
+                <p class="answer">A: Is all three an option? I mean, c'mon popcorn is mother's milk for christ sake.</p>
+
+                <h3>260. What was the first album you ever bought with your own money?</h3>
+                <p class="answer">A: LOLOL you don't know me very well do you? Actually it was RHCP's Californication, for someone else.</p>
+
+                <h3>261. What is your favorite way to spend a Tuesday night?</h3>
+                <p class="answer">A: Preparing for Wendesday.</p>
+
+                <h3>262. Are you a "wear socks to bed" or "barefoot" sleeper?</h3>
+                <p class="answer">A: Winter is socks; summer is raw-dawg.....gotta sleep cold.</p>
+
+                <h3>263. Free weights or bar?</h3>
+                <p class="answer">A: Bar.</p>
+
+                <h3>264. What is the most underrated movie genre?</h3>
+                <p class="answer">A: Rom-Com.</p>
+
+                <h3>265. If you could have any animal as a pet (regardless of legality), what would it be?</h3>
+                <p class="answer">A: A black panther. Hi Salem!</p>
+
+                <h3>266. What is your favorite scent in the kitchen?</h3>
+                <p class="answer">A: A simmering bolgnese sauce.</p>
+
+                <h3>267. Do you prefer a window seat or an aisle seat on a plane?</h3>
+                <p class="answer">A: Aisle. BTW people who rush the aisle and move forward once the plane stops at the gate need to be perma-banned by the airlines.</p>
+
+                <h3>268. What is the best topping for a baked potato?</h3>
+                <p class="answer">A: From bottom to top: butter, salt/pepper, cheddar cheese, blue cheese dressing and scallions.</p>
+
+                <h3>269. If you could be any age for a week, what age would you pick?</h3>
+                <p class="answer">A: 27 years old with a dream.</p>
+
+                <h3>270. What is your favorite "guilty pleasure" snack from a gas station?</h3>
+                <p class="answer">A: Anything "gummy".</p>
+
+                <h3>271. Are you a "read the manual" or "figure it out as I go" person?</h3>
+                <p class="answer">A: Half-n-half; start out believing that you're smarter than everyone else....</p>
+
+                <h3>272. What is the best souvenir you’ve ever brought back from a trip?</h3>
+                <p class="answer">A: A rock.</p>
+
+                <h3>273. Do you prefer your coffee in a mug or a travel tumbler?</h3>
+                <p class="answer">A: Mug, large white.</p>
+
+                <h3>274. What’s a "boring" hobby you secretly find fascinating?</h3>
+                <p class="answer">A: Taking care of a front lawn #LawnRebel</p>
+
+                <h3>275. What is your favorite color to wear?</h3>
+                <p class="answer">A: Blue or gray.</p>
+
+                <h3>276. If you could have a secret room in your house, what would be in it?</h3>
+                <p class="answer">A: Why would I disclose the contents of a secret room?</p>
+
+                <h3>277. What’s the best local restaurant in your town that no one knows about?</h3>
+                <p class="answer">A: Canyon Inn.</p>
+
+                <h3>278. Are you a "make the bed every morning" person?</h3>
+                <p class="answer">A: Yes, start the day with a win.</p>
+
+                <h3>279. What’s your favorite thing to do on a Sunday afternoon?</h3>
+                <p class="answer">A: Hike.</p>
+
+                <h3>280. If you were a spice, which one would you be?</h3>
+                <p class="answer">A: Salt.</p>
+
+                <h3>281. What is the most "high-tech" thing you actually enjoy using?</h3>
+                <p class="answer">A: My laptop.</p>
+
+                <h3>282. Do you prefer movies that make you think or movies that make you laugh?</h3>
+                <p class="answer">A: Laugh; I do enough thinking for ten people.</p>
+
+                <h3>283. What is your favorite way to eat an egg?</h3>
+                <p class="answer">A: Hmmm...overeasy...but really there's no bad way to eat eggs.</p>
+
+                <h3>284. What’s a song you know every single word to?</h3>
+                <p class="answer">A: There isn't a song I know all the words to.</p>
+
+                <h3>285. If you could visit any planet, which one would it be?</h3>
+                <p class="answer">A: I think Saturn....gas giant, with rings and moons would be cool.</p>
+
+                <h3>286. What is your favorite sound in nature?</h3>
+                <p class="answer">A: Waves crashing on a beach.</p>
+
+                <h3>287. Are you a "morning shower" or "night shower" person?</h3>
+                <p class="answer">A: Both.....two showers a day.</p>
+
+                <h3>288. What’s the best piece of "useless" trivia you know?</h3>
+                <p class="answer">A: There are 5,280 feet in a mile; my avg step is 20" long. So in order for me to walk a mile I will take approx. 3,168 steps.</p>
+
+                <h3>289. What is your favorite thing about the town you live in?</h3>
+                <p class="answer">A: It doesn't snow.</p>
+
+                <h3>290. If you could instantly be fluent in any language, which would it be?</h3>
+                <p class="answer">A: French. I've struggled learning this my whole life.</p>
+
+                <h3>291. Do you prefer a physical calendar or a digital one?</h3>
+                <p class="answer">A: At this point on the tech curve you have to go digital.</p>
+
+                <h3>292. What is the best "old person" habit you’ve adopted?</h3>
+                <p class="answer">A: Pointing out that younger generations are softer than my generation.</p>
+
+                <h3>293. What’s your favorite way to celebrate a small win?</h3>
+                <p class="answer">A: A good high-five is the world to me!</p>
+
+                <h3>294. If you had to eat one meal for the rest of your life, what would it be?</h3>
+                <p class="answer">A: Cheeseburgers.</p>
+
+                <h3>295. What’s the best compliment you can give someone?</h3>
+                <p class="answer">A: 'You seem like a nice person'</p>
+
+                <h3>296. Do you prefer your house to be perfectly quiet or have background noise?</h3>
+                <p class="answer">A: You clearly have no idea who I am.</p>
+
+                <h3>297. What is your favorite "hidden gem" spot in California?</h3>
+                <p class="answer">A: Even though there is zero chance that anyone reads this entire list, I'm still not sharing it.</p>
+
+                <h3>298. If you could witness any historical event (as a ghost), what would it be?</h3>
+                <p class="answer">A: Signing of the Declaration of Independence.</p>
+
+                <h3>299. What’s the best thing you’ve ever found at a garage sale?</h3>
+                <p class="answer">A: Never been to a garage sale.</p>
+
+                <h3>300. Are you a "top bunk" or "bottom bunk" person?</h3>
+                <p class="answer">A. Is this a question that has a double meaning? Let's just be safe and say 'Top'....always.</p>
+
+                <h3>301. What’s the first thing you’d do if you won a free trip to anywhere in the world tomorrow?</h3>
+                <p class="answer">A. Cancel my passport.</p>
+                
+            </div>
+        </div>
+
+        <div class="sidebar-image"></div>
+    </div>
+
+</body>
+</html>
