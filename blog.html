@@ -20,7 +20,7 @@
             color: #ffffff;
             padding: 15px 0;
             text-align: left;
-            text-indent: 60px; /* Aligns with content padding */
+            text-indent: 60px;
             font-size: 1rem;
             font-weight: bold;
             text-transform: uppercase;
@@ -31,7 +31,6 @@
             z-index: 100;
         }
 
-        /* Main Layout Container */
         .blog-container {
             max-width: 900px;
             margin: 0 auto;
@@ -56,7 +55,12 @@
             margin-top: 10px;
         }
 
-        /* Article Card Styles */
+        /* Container for Dynamic Posts */
+        #blog-posts-container {
+            display: flex;
+            flex-direction: column;
+        }
+
         .article-card {
             margin-bottom: 60px;
             display: flex;
@@ -89,6 +93,7 @@
             line-height: 1.7;
             color: #555;
             margin-bottom: 20px;
+            white-space: pre-line; /* Keeps your formatting from the JSON */
         }
 
         .read-more {
@@ -96,10 +101,6 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1rem;
-        }
-
-        .read-more:hover {
-            text-decoration: underline;
         }
 
         .nav-back {
@@ -110,7 +111,6 @@
             font-weight: bold;
         }
 
-        /* Mobile Adjustments */
         @media (max-width: 768px) {
             .blog-container { padding: 40px 20px; }
             h1 { font-size: 2.2rem; }
@@ -133,27 +133,37 @@
             <p class="subtitle">Weekly commentary on secondary marketing, industry trends, and finance.</p>
         </header>
 
-        <!-- Article 1 -->
-        <article class="article-card">
-            <span class="article-date">April 30, 2026</span>
-            <a href="#" class="article-title">Secondary Marketing Strategies in a Volatile Environment</a>
-            <p class="article-excerpt">
-                As market conditions continue to shift, understanding the nuances of pipeline hedging and execution becomes more critical than ever...
-            </p>
-            <a href="#" class="read-more">Read Full Article →</a>
-        </article>
-
-        <!-- Article 2 -->
-        <article class="article-card">
-            <span class="article-date">April 27, 2026</span>
-            <a href="#" class="article-title">The Future of Mortgage Servicing Rights</a>
-            <p class="article-excerpt">
-                Evaluating the long-term value of MSRs requires a deep dive into prepayment speeds and the current interest rate trajectory...
-            </p>
-            <a href="#" class="read-more">Read Full Article →</a>
-        </article>
+        <div id="blog-posts-container">
+            <p>Loading insights...</p>
+        </div>
 
     </div>
+
+    <script>
+        // Fetches the data from your JSON file
+        fetch('posts.json')
+            .then(response => response.json())
+            .then(posts => {
+                const container = document.getElementById('blog-posts-container');
+                container.innerHTML = ''; // Clear the loading message
+
+                posts.forEach(post => {
+                    const articleHtml = `
+                        <article class="article-card">
+                            <span class="article-date">${post.date}</span>
+                            <a href="${post.link || '#'}" class="article-title">${post.title}</a>
+                            <p class="article-excerpt">${post.excerpt}</p>
+                            <a href="${post.link || '#'}" class="read-more">Read Full Article →</a>
+                        </article>
+                    `;
+                    container.innerHTML += articleHtml;
+                });
+            })
+            .catch(error => {
+                console.error('Error loading blog posts:', error);
+                document.getElementById('blog-posts-container').innerHTML = '<p>Unable to load posts at this time.</p>';
+            });
+    </script>
 
 </body>
 </html>
