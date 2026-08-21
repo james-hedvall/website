@@ -8,74 +8,96 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
+            height: 100%; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #fcfcfc;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; 
         }
 
-        /* Full-width Top Banner */
+        /* Full-width Top Banner (Frozen/Sticky) */
         .status-banner {
             width: 100%;
             background-color: #415681;
             color: #ffffff;
-            padding: 15px 0;
-            text-align: left;
-            font-size: 1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 80;
+            position: sticky;
+            top: 0;
+            z-index: 100; 
         }
 
-        /* Container adjusted to take up remaining height */
+        /* Logo Styling */
+        .banner-logo {
+            height: 85px; 
+            width: auto;
+            display: block;
+        }
+
+        /* Site Title Styling - Margins added to line up with main text content */
+        .banner-title {
+            font-size: 2.2rem; 
+            margin: 0;
+            margin-left: 20px; /* Pushes the title 20px past the 240px sidebar mark to hit the text line */
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            flex: 1;
+        }
+
+        /* Main container holds both the left sidebar and the main content */
         .container {
             display: flex;
-            height: calc(100vh - 54px); 
+            flex: 1;
             width: 100%;
+            box-sizing: border-box;
+            overflow: hidden; 
         }
 
-        .content {
-            flex: 2; 
-            padding: 60px;
+        /* Left Navigation Sidebar (Frozen/Sticky) */
+        .sidebar-nav {
+            width: 240px; 
+            padding: 60px 20px 60px 40px; 
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            gap: 15px; 
+            box-sizing: border-box;
+            position: sticky;
+            top: 0;
+            height: 100%; 
         }
 
-        .sidebar-image {
+        /* Main Content Box on the Right (Only this scrolls) */
+        .content {
             flex: 1;
-            background-color: #415681; 
-            background-image: url('PCT_map.png'); 
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            border-left: 1px solid #eee;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: #415681; 
+            max-width: 850px; 
+            padding: 60px 40px 60px 20px; 
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; 
+            height: 100%;
+            box-sizing: border-box;
         }
 
         p {
             font-size: 1.2rem;
-            line-height: 1.6;
-            max-width: 600px;
+            line-height: 1.7; 
+            margin: 0 0 24px 0; 
+        }
+        
+        p:last-of-type {
+            margin-bottom: 0; 
         }
 
-        .button-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
+        /* Buttons optimized for vertical stacking */
         .cta-button {
-            padding: 15px 30px;
+            padding: 15px 20px;
+            width: 100%; 
+            box-sizing: border-box;
             background-color: #415681;
             color: white;
             text-decoration: none;
@@ -91,39 +113,77 @@
         }
 
         .cta-button:hover:not(.pending) {
-            transform: translateY(-2px);
+            transform: translateX(4px); 
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
+        /* Responsive design for tablets and mobile phones */
         @media (max-width: 768px) {
-            .container { flex-direction: column-reverse; height: auto; }
-            .sidebar-image { height: 30vh; flex: none; }
-            .content { padding: 40px 20px; flex: none; }
-            .button-group { flex-direction: column; width: 100%;}
-            h1 { font-size: 2.5rem; }
+            body, html {
+                overflow: auto; 
+            }
+            .status-banner { 
+                padding: 15px 20px; 
+                flex-direction: column; 
+                text-align: center;
+                gap: 10px;
+                position: relative; 
+            }
+            .banner-logo { height: 60px; }
+            .banner-title { 
+                font-size: 1.8rem; 
+                margin-left: 0; /* Resets the alignment on mobile views */
+            }
+            
+            .container { 
+                flex-direction: column; 
+                overflow: visible;
+            }
+            .sidebar-nav { 
+                width: 100%; 
+                padding: 30px 20px 10px 20px; 
+                position: relative;
+                height: auto;
+            }
+            .content { 
+                padding: 20px; 
+                overflow-y: visible;
+                height: auto;
+            }
+            
+            .cta-button:hover:not(.pending) {
+                transform: translateY(-2px); 
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="status-banner">
-        James Hedvall's Webpage
-    </div>
+    <header class="status-banner">
+        <img src="logo.jpg" alt="JH Logo" class="banner-logo">
+        <h1 class="banner-title">James Hedvall's Webpage</h1>
+    </header>
 
     <div class="container">
-        <div class="content">
-            <h1>James Hedvall's Webpage</h1>
-            <p>I'm currently preparing for my next major project.</p>
-            
-            <div class="button-group">
-                <a href= "#" class="cta-button">Resume</a>
-                <a href="https://docs.google.com/spreadsheets/d/1u9aguSz0zB5Bm8lVX5GZAlbye-ORpeP-uC80SR3pubA/edit?usp=sharing&rm=minimal" target="_blank" class="cta-button">View My Gear List</a>
-                <a href="more_faq.html" class="cta-button">Who Am I?</a>
-                <a href="blog.html" class="cta-button">BLOG</a>
-            </div>
-        </div>
+        <nav class="sidebar-nav">
+            <a href="blog.html" class="cta-button">BLOG</a>
+            <a href="#" class="cta-button">Resume</a>
+            <a href="#" class="cta-button">Contact Me</a>
+            <a href="misc.html" class="cta-button">Misc</a>
+        </nav>
 
-        <div class="sidebar-image"></div>
+        <main class="content">
+            <p><b>Hello and welcome to my webpage.</b></p>
+            <p>I have a tendency to always take the hard road in life and this site is no exception. In creating this site I didn't use a vendor product, but instead I learned HTML/CSS as I went along, found out how to manage the back-end, started to incorporate java/python and after many headaches finally had something that I really wanted. By design it's never going to be a polished webpage like you may find elsewhere, and really it's an homage to webpages of yester-year...if you're old enough and can remember paying your ISP by the hour, webpages with their bright white or gray backgrounds, un-visited links were in raw blue (Hex code: #0000FF), and visited links were in purple (Hex code: #800080) it was simple, straightforward and to the point; utlilitarian, kind of like me. Since I detest all forms of social media, consider this webpage my online presence. </p>
+
+            <p><b>BLOG</b></p>
+
+            <p>I post a weekly professional blog here. I typically write about mortgage banking, the secondary markets/capital markets, and really anything relating to real estate finance.</p>
+            
+            <p><b>Resume</b></p>
+
+            <p>Updated resume can be found here.</p>
+        </main>
     </div>
 
 </body>
