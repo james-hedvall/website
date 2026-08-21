@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miscelaneous Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcfcfc;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; 
+        }
+
+        /* Full-width Top Banner (Frozen/Sticky) */
+        .status-banner {
+            width: 100%;
+            background-color: #415681;
+            color: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100; 
+        }
+
+        /* Logo Styling */
+        .banner-logo {
+            height: 85px; 
+            width: auto;
+            display: block;
+        }
+
+        /* Site Title Styling - Margins added to line up with main text content */
+        .banner-title {
+            font-size: 2.2rem; 
+            margin: 0;
+            margin-left: 20px; /* Pushes the title 20px past the 240px sidebar mark to hit the text line */
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            flex: 1;
+        }
+
+        /* Main container holds both the left sidebar and the main content */
+        .container {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden; 
+        }
+
+        /* Left Navigation Sidebar (Frozen/Sticky) */
+        .sidebar-nav {
+            width: 240px; 
+            padding: 60px 20px 60px 40px; 
+            display: flex;
+            flex-direction: column;
+            gap: 15px; 
+            box-sizing: border-box;
+            position: sticky;
+            top: 0;
+            height: 100%; 
+        }
+
+        /* Main Content Box on the Right (Only this scrolls) */
+        .content {
+            flex: 1;
+            max-width: 850px; 
+            padding: 60px 40px 60px 20px; 
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; 
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.7; 
+            margin: 0 0 24px 0; 
+        }
+        
+        p:last-of-type {
+            margin-bottom: 0; 
+        }
+
+        /* Buttons optimized for vertical stacking */
+        .cta-button {
+            padding: 15px 20px;
+            width: 100%; 
+            box-sizing: border-box;
+            background-color: #415681;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .cta-button.pending {
+            background-color: #999;
+            cursor: not-allowed;
+        }
+
+        .cta-button:hover:not(.pending) {
+            transform: translateX(4px); 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive design for tablets and mobile phones */
+        @media (max-width: 768px) {
+            body, html {
+                overflow: auto; 
+            }
+            .status-banner { 
+                padding: 15px 20px; 
+                flex-direction: column; 
+                text-align: center;
+                gap: 10px;
+                position: relative; 
+            }
+            .banner-logo { height: 60px; }
+            .banner-title { 
+                font-size: 1.8rem; 
+                margin-left: 0; /* Resets the alignment on mobile views */
+            }
+            
+            .container { 
+                flex-direction: column; 
+                overflow: visible;
+            }
+            .sidebar-nav { 
+                width: 100%; 
+                padding: 30px 20px 10px 20px; 
+                position: relative;
+                height: auto;
+            }
+            .content { 
+                padding: 20px; 
+                overflow-y: visible;
+                height: auto;
+            }
+            
+            .cta-button:hover:not(.pending) {
+                transform: translateY(-2px); 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="status-banner">
+        <img src="logo.jpg" alt="JH Logo" class="banner-logo">
+        <h1 class="banner-title">Miscelaneous Page</h1>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar-nav">
+            <a href="more_faq.html" class="cta-button">Who Am I?</a>
+            <a href="pct_faq.html" class="cta-button">Project 2650</a>
+            <a href="#" class="cta-button">Manifesto</a>
+            <a href="#" class="cta-button">Pictures</a>
+            <a href="index.html" class="cta-button">Home</a>
+        </nav>
+
+        <main class="content">
+            <p><b>Hello and welcome to the "I Didn't Know Where to Place It Page".</b></p>
+            <p>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+        </main>
+    </div>
+
+</body>
+</html>
